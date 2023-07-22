@@ -1,12 +1,4 @@
-const withPuppeteer = require('next-puppeteer');
-
-module.exports = withPuppeteer({
-  puppeteer: {
-    launchOptions: {
-      args: ['--no-sandbox', '--disable-setuid-sandbox'],
-    },
-  },
-
+module.exports = {
   reactStrictMode: true,
   trailingSlash: true,
   pageExtensions: ['page.js', 'api.js'],
@@ -44,4 +36,4 @@ module.exports = withPuppeteer({
 
     return config;
   },
-});
+};
