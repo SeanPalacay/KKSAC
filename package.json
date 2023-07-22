@@ -37,6 +37,7 @@
   "dependencies": {
     "cors": "^2.8.5",
     "serverless-http": "^2.6.1",
+    "helmet": "^4.6.0",
     "@netlify/plugin-nextjs": "^4.39.1",
     "framer-motion": "^7.1.0",
     "mdx-bundler": "^9.0.1",
