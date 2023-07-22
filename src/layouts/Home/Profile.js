@@ -25,12 +25,13 @@ const ProfileText = ({ visible, titleId }) => (
       enrolled at
       <Link href="https://bicol-u.edu.ph/"> Bicol University </Link>. Our expertise lies
       in UI/UX design, Software, and Application Development. Our proficiency in coding
-      enables us to swiftly create prototypes and validate user experiences
+      enables us to swiftly create prototypes and validate user experiences.
     </Text>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      In my spare time I like to practice Brazilian Jiu Jitsu, play video games, and{' '}
-      <Link href="/projects/volkihar-knight">make mods</Link>. I’m always down for hearing
-      about new projects, so feel free to drop me a line.
+      In our spare time, we also enjoy eating siopao, playing video games, and enganging
+      in in
+      <Link href=""> social media pages</Link>. We’re always excited to hear about new
+      projects, so feel free to drop us a line.
     </Text>
   </Fragment>
 );
