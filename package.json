@@ -1,10 +1,8 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
-  "homepage": "https://hamishw.com",
-  "description": "Portfolio site for Hamish Williams",
-  "repository": "https://github.com/HamishMW/portfolio.git",
-  "author": "Hamish Williams <hello@hamishw.com>",
+  "description": "Portfolio site for KKSAC",
+  "repository": "https://github.com/SeanPalacay/KKSAC.git",
   "devDependencies": {
     "@mapbox/rehype-prism": "^0.8.0",
     "@storybook/addon-a11y": "^6.5.10",
@@ -37,6 +35,7 @@
     "stylelint-config-standard": "^26.0.0"
   },
   "dependencies": {
+    "@netlify/plugin-nextjs": "^4.39.1",
     "framer-motion": "^7.1.0",
     "mdx-bundler": "^9.0.1",
     "next": "^12.2.5",
@@ -47,7 +46,7 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export -o build/",
+    "build": "next build && next export",
     "build:storybook": "build-storybook -o build-storybook && node scripts/draco-storybook",
     "deploy": "aws s3 sync --delete build/ s3://hamish-portfolio-site",
     "deploy:storybook": "aws s3 sync --delete build-storybook s3://hamish-portfolio-storybook",

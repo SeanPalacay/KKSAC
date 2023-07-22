@@ -1,0 +1,12 @@
+[build]
+  publish = "out"
+  command = "npm run build" # Set your build command here
+
+[context.production.environment]
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
+
+[context.deploy-preview.environment]
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
+
+[context.branch-deploy.environment]
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
