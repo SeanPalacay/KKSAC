@@ -71,7 +71,7 @@ export const Home = () => {
         sectionRef={projectOne}
         visible={visibleSections.includes(projectOne.current)}
         index={1}
-        title="Coming Soon..."
+        title="Work in Progress..."
         description="Automated Statistical Performance and Reporting System (SPRS)"
         buttonText="View project"
         // buttonLink="/projects/smart-sparrow"

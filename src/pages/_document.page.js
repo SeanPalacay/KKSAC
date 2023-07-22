@@ -13,7 +13,7 @@ export default function Document() {
         <link rel="shortcut icon" href="/favicon.png" type="image/png" />
         <link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/icon-256.png" />
-        <link type="text/plain" rel="author" href="/humans.txt" />
+        <link type="text/plain" rel="author" href="" />
 
         <link rel="preload" href={GothamMedium} as="font" crossOrigin="true" />
         <link rel="preload" href={GothamBook} as="font" crossOrigin="true" />

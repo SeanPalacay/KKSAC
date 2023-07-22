@@ -11,7 +11,7 @@ import { cssProps, media, msToNum, numToMs } from 'utils/style';
 import { NavToggle } from './NavToggle';
 import styles from './Navbar.module.css';
 import { ThemeToggle } from './ThemeToggle';
-import { navLinks, socialLinks } from './navData';
+import { comingsoon, navLinks, socialLinks } from './navData';
 
 export const Navbar = () => {
   const [current, setCurrent] = useState();
@@ -139,6 +139,9 @@ export const Navbar = () => {
     if (menuOpen) dispatch({ type: 'toggleMenu' });
   };
 
+  // Add a state to control whether the "Coming Soon" text should be displayed
+  const [showComingSoon, setShowComingSoon] = useState(true);
+
   return (
     <header className={styles.navbar} ref={headerRef}>
       <RouterLink href={route === '/' ? '/#intro' : '/'} scroll={false}>
@@ -151,6 +154,7 @@ export const Navbar = () => {
           <Monogram highlight />
         </a>
       </RouterLink>
+
       <NavToggle onClick={() => dispatch({ type: 'toggleMenu' })} menuOpen={menuOpen} />
       <nav className={styles.nav}>
         <div className={styles.navList}>
@@ -167,8 +171,35 @@ export const Navbar = () => {
             </RouterLink>
           ))}
         </div>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+
+        {showComingSoon && <span className={styles.comingSoonText}>Coming Soon</span>}
+        <div className={styles.navList}>
+          {comingsoon.map(({ label, pathname }) => (
+            <RouterLink href={pathname} scroll={false} key={label}>
+              <a
+                data-navbar-item
+                className={styles.comingsoon}
+                aria-current={getCurrent(pathname)}
+                onClick={handleNavItemClick}
+              >
+                {label}
+              </a>
+            </RouterLink>
+          ))}
+        </div>
         <NavbarIcons desktop />
       </nav>
+      {/* Check if the "Coming Soon" text should be displayed */}
+
       <Transition unmount in={menuOpen} timeout={msToNum(tokens.base.durationL)}>
         {visible => (
           <nav className={styles.mobileNav} data-visible={visible}>
@@ -189,6 +220,7 @@ export const Navbar = () => {
                 </a>
               </RouterLink>
             ))}
+
             <NavbarIcons />
             <ThemeToggle isMobile />
           </nav>

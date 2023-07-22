@@ -100,6 +100,20 @@
   }
 }
 
+.comingsoon {
+  color: #888; /* Grey color - you can adjust the hex value to your desired shade */
+  font-weight: var(--fontWeightMedium);
+  font-size: var(--headerNavFontSize);
+  text-decoration: none;
+  position: relative;
+  transition: color var(--durationS) ease 0.1s;
+  @media (--mediaUseMotion) {
+    &::after {
+      transition: transform var(--durationM) var(--bezierFastoutSlowin);
+    }
+  }
+}
+
 .navIcons {
   display: flex;
   flex-direction: column;

@@ -17,6 +17,13 @@ export const navLinks = [
   },
 ];
 
+export const comingsoon = [
+  {
+    label: 'Team',
+    pathname: '',
+  },
+];
+
 export const socialLinks = [
   {
     label: 'Twitter',
