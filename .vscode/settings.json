@@ -11,5 +11,8 @@
     "**/node_modules": true,
     "**/build": true
   },
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "files.associations": {
+    "K-removebg-preview copy.C": "cpp"
+  }
 }

@@ -18,19 +18,22 @@ import { ProjectSummary } from 'layouts/Home/ProjectSummary';
 import { useEffect, useRef, useState } from 'react';
 import styles from './Home.module.css';
 
-const disciplines = ['Developer', 'Prototyper', 'Animator', 'Illustrator', 'Modder'];
+const disciplines = ['Application', 'Software', 'Coding'];
 
 export const Home = () => {
   const [visibleSections, setVisibleSections] = useState([]);
   const [scrollIndicatorHidden, setScrollIndicatorHidden] = useState(false);
   const intro = useRef();
   const projectOne = useRef();
-  const projectTwo = useRef();
-  const projectThree = useRef();
+  // const projectTwo = useRef();
+  // const projectThree = useRef();
   const details = useRef();
 
   useEffect(() => {
-    const sections = [intro, projectOne, projectTwo, projectThree, details];
+    const sections = [intro, projectOne, details];
+
+    // useEffect(() => {
+    //   const sections = [intro, projectOne, projectTwo, projectThree, details];
 
     const sectionObserver = new IntersectionObserver(
       (entries, observer) => {
@@ -68,9 +71,8 @@ export const Home = () => {
   return (
     <div className={styles.home}>
       <Meta
-        title="Designer + Developer"
-        description="Design portfolio of Hamish Williams — a product designer working on web & mobile
-          apps with a focus on motion, experience design, and accessibility."
+        title="Software + Application + Coding"
+        description="Welcome to the portfolio of KKSAC Solutions Company, where we showcase our remarkable work as product designers specializing in web and mobile applications. With an unwavering focus on motion, experience design, and accessibility, our team crafts exceptional user interfaces that blend aesthetics with functionality. From elegant animations to seamless interactions, each project reflects our dedication to delivering outstanding user experiences. Explore the diverse range of projects featured here, and witness how KKSAC Solutions Company continues to shape the digital landscape with innovative and user-centric designs"
       />
       <Intro
         id="intro"
@@ -83,10 +85,10 @@ export const Home = () => {
         sectionRef={projectOne}
         visible={visibleSections.includes(projectOne.current)}
         index={1}
-        title="Designing the future of education"
-        description="Designing a platform to help educators build better online courseware"
+        title="Coming Soon..."
+        description="Automated Statistical Performance and Reporting System (SPRS)"
         buttonText="View project"
-        buttonLink="/projects/smart-sparrow"
+        // buttonLink="/projects/smart-sparrow"
         model={{
           type: 'laptop',
           alt: 'Smart Sparrow lesson builder',
@@ -98,7 +100,7 @@ export const Home = () => {
           ],
         }}
       />
-      <ProjectSummary
+      {/* <ProjectSummary
         id="project-2"
         alternate
         sectionRef={projectTwo}
@@ -142,7 +144,7 @@ export const Home = () => {
             },
           ],
         }}
-      />
+      /> */}
       <Profile
         sectionRef={details}
         visible={visibleSections.includes(details.current)}
