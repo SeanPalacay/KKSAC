@@ -28,8 +28,8 @@ const ProfileText = ({ visible, titleId }) => (
       enables us to swiftly create prototypes and validate user experiences
     </Text>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      &apos; We are open to learning about new projects, so don't hesitate to get in touch
-      with us. Feel free to drop us a message anytime.
+      We are open to learning about new projects, so don't hesitate to get in touch with
+      us. Feel free to drop us a message anytime.
     </Text>
   </Fragment>
 );
