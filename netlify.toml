@@ -10,3 +10,6 @@
 
 [context.branch-deploy.environment]
   NETLIFY_NEXT_PLUGIN_SKIP = "true"
+
+[[plugins]]
+package = "@netlify/plugin-functions-install-core"

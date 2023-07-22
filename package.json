@@ -35,6 +35,7 @@
     "stylelint-config-standard": "^26.0.0"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "serverless-http": "^2.6.1",
     "@netlify/plugin-nextjs": "^4.39.1",
     "framer-motion": "^7.1.0",
@@ -48,6 +49,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export",
+    "install:functions": "cd functions && npm install",
     "build:storybook": "build-storybook -o build-storybook && node scripts/draco-storybook",
     "deploy": "aws s3 sync --delete build/ s3://hamish-portfolio-site",
     "deploy:storybook": "aws s3 sync --delete build-storybook s3://hamish-portfolio-storybook",
