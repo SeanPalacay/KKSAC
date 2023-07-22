@@ -28,8 +28,9 @@ const ProfileText = ({ visible, titleId }) => (
       enables us to swiftly create prototypes and validate user experiences
     </Text>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      We are open to learning about new projects, so don't hesitate to get in touch with
-      us. Feel free to drop us a message anytime.
+      In my spare time I like to practice Brazilian Jiu Jitsu, play video games, and{' '}
+      <Link href="/projects/volkihar-knight">make mods</Link>. I’m always down for hearing
+      about new projects, so feel free to drop me a line.
     </Text>
   </Fragment>
 );
